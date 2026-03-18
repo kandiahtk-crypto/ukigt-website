@@ -2,8 +2,7 @@ export default function AboutPage() {
   return (
     <main
       style={{
-        padding: "120px 24px 60px",
-        maxWidth: "1100px",
+        padding: "120px 24px 60px",        maxWidth: "1100px",
         margin: "0 auto",
       }}
     >
