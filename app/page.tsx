@@ -1,8 +1,6 @@
 export default function HomePage() {
   return (
     <main>
-
-      {/* HERO */}
       <section
         style={{
           minHeight: "100vh",
@@ -22,6 +20,7 @@ export default function HomePage() {
               color: "#d4af37",
               marginBottom: "20px",
               lineHeight: 1.1,
+              maxWidth: "900px",
             }}
           >
             Reliable Ground-Transport Solutions for UK & Ireland Touring
@@ -36,8 +35,8 @@ export default function HomePage() {
               marginBottom: "30px",
             }}
           >
-            Premium touring logistics for international operators, built on reliability,
-            precision, and a professional delivery standard.
+            Premium touring logistics for international operators, built on
+            reliability, precision, and a professional delivery standard.
           </p>
 
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -71,39 +70,67 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* INTRO */}
-      <section style={{ padding: "80px 24px", maxWidth: "1100px", margin: "0 auto" }}>
+      <section
+        style={{
+          padding: "80px 24px",
+          maxWidth: "1100px",
+          margin: "0 auto",
+        }}
+      >
         <p style={{ fontSize: "18px", lineHeight: 1.8, color: "#ccc" }}>
-          UK Inbound Ground Transport provides structured ground-transport solutions for
-          international tour operators across England, Scotland, Wales and integrated
-          flows with Ireland. We deliver consistent, dependable touring operations designed
-          for long-haul markets and high-volume group programmes.
+          UK Inbound Ground Transport provides structured ground-transport
+          solutions for international tour operators across England, Scotland,
+          Wales and integrated flows with Ireland. We deliver consistent,
+          dependable touring operations designed for long-haul markets and
+          high-volume group programmes.
         </p>
       </section>
 
-      {/* WHO WE ARE */}
       <section style={{ padding: "80px 24px", background: "#050505" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ color: "#d4af37", fontSize: "32px", marginBottom: "20px" }}>
+          <h2
+            style={{
+              color: "#d4af37",
+              fontSize: "32px",
+              marginBottom: "20px",
+            }}
+          >
             Professional. Structured. Reliable.
           </h2>
 
           <p style={{ color: "#bbb", lineHeight: 1.8 }}>
-            UK Inbound Ground Transport delivers corporate-grade touring logistics built
-            around precision, clear communication and reliable daily execution. Our
-            operations support multi-region touring across the United Kingdom with seamless
-            transitions into Ireland.
+            UK Inbound Ground Transport delivers corporate-grade touring
+            logistics built around precision, clear communication and reliable
+            daily execution. Our operations support multi-region touring across
+            the United Kingdom with seamless transitions into Ireland.
           </p>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section style={{ padding: "80px 24px", maxWidth: "1100px", margin: "0 auto" }}>
-        <h2 style={{ color: "#d4af37", fontSize: "32px", marginBottom: "40px" }}>
+      <section
+        style={{
+          padding: "80px 24px",
+          maxWidth: "1100px",
+          margin: "0 auto",
+        }}
+      >
+        <h2
+          style={{
+            color: "#d4af37",
+            fontSize: "32px",
+            marginBottom: "40px",
+          }}
+        >
           Core Services
         </h2>
 
-        <div style={{ display: "grid", gap: "24px" }}>
+        <div
+          style={{
+            display: "grid",
+            gap: "24px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          }}
+        >
           {[
             {
               title: "Fixed-Departure Series",
@@ -129,6 +156,7 @@ export default function HomePage() {
                 padding: "24px",
                 borderRadius: "12px",
                 border: "1px solid #222",
+                transition: "0.2s",
               }}
             >
               <h3 style={{ color: "#d4af37" }}>{s.title}</h3>
@@ -138,14 +166,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MARKETS */}
       <section style={{ padding: "80px 24px", background: "#050505" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ color: "#d4af37", fontSize: "32px", marginBottom: "40px" }}>
+          <h2
+            style={{
+              color: "#d4af37",
+              fontSize: "32px",
+              marginBottom: "40px",
+            }}
+          >
             Markets We Serve
           </h2>
 
-          <div style={{ display: "grid", gap: "24px" }}>
+          <div
+            style={{
+              display: "grid",
+              gap: "24px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            }}
+          >
             {[
               {
                 title: "United States",
@@ -171,6 +210,7 @@ export default function HomePage() {
                   padding: "24px",
                   borderRadius: "12px",
                   border: "1px solid #222",
+                  transition: "0.2s",
                 }}
               >
                 <h3 style={{ color: "#d4af37" }}>{m.title}</h3>
@@ -181,9 +221,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section style={{ padding: "100px 24px", textAlign: "center" }}>
-        <h2 style={{ color: "#d4af37", fontSize: "32px", marginBottom: "20px" }}>
+        <h2
+          style={{
+            color: "#d4af37",
+            fontSize: "32px",
+            marginBottom: "20px",
+          }}
+        >
           Ready to plan your next touring programme?
         </h2>
 
@@ -205,7 +250,6 @@ export default function HomePage() {
           Contact Us
         </a>
       </section>
-
     </main>
   );
 }
