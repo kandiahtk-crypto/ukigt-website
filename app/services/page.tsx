@@ -3,7 +3,7 @@ export default function ServicesPage() {
     <main
       style={{
         padding: "120px 24px 60px",
-        maxWidth: "1100px",
+        maxWidth: "1000px",
         margin: "0 auto",
       }}
     >
@@ -15,7 +15,7 @@ export default function ServicesPage() {
           marginBottom: "20px",
         }}
       >
-        Services
+        Our Services – UK & Ireland Touring Logistics
       </h1>
 
       {/* INTRO */}
@@ -24,88 +24,116 @@ export default function ServicesPage() {
           fontSize: "18px",
           lineHeight: 1.8,
           color: "#bbb",
-          marginBottom: "50px",
-          maxWidth: "900px",
+          marginBottom: "40px",
         }}
       >
-        Our services are designed for professional inbound tour operators and
-        destination management companies who require clarity, structure and
-        reliability throughout the touring season.
+        UK Inbound Ground Transport delivers a complete range of professional
+        inbound touring services across the United Kingdom and Ireland. Our
+        service offering is designed for operators who require dependable,
+        structured and scalable ground-transport solutions for international guests.
       </p>
 
-      {/* SERVICES GRID */}
-      <div
+      {/* SERVICE BLOCK */}
+      <Service
+        title="Fixed-Departure Series Support"
+        text="We provide fully structured transport solutions for fixed-departure touring series with consistent, repeatable delivery across the season. Our team coordinates daily timings, routing, driver allocation and programme flow to ensure every departure matches brochure schedules and market expectations."
+        keywords="SEO: fixed departure tours UK, series touring logistics, UK inbound transport"
+      />
+
+      <Service
+        title="Multi-Region UK Touring"
+        text="Our multi-region UK touring service supports seamless travel across England, Scotland and Wales, with balanced pacing and efficient itinerary structure. We ensure each regional segment flows naturally into the next, creating a unified touring experience for your passengers."
+        keywords="SEO: multi region UK tours, UK touring logistics, England Scotland Wales tours"
+      />
+
+      <Service
+        title="UK–Ireland Integrated Itineraries"
+        text="We offer integrated support for UK and Ireland touring, managing ferries, timings and cross-country continuity. This service is ideal for operators offering British Isles itineraries, where seamless movement between both countries is essential."
+        keywords="SEO: UK Ireland tours, British Isles tours, cross-country touring"
+      />
+
+      <Service
+        title="Large Group & Multi-Coach Coordination"
+        text="Our team manages large group movements, multi-coach programmes and high-volume itineraries with clear operational discipline. We coordinate timings, sequencing, grouped pick-ups and efficient daily movement patterns."
+        keywords="SEO: UK group transport, multi-coach coordination, large group touring"
+      />
+
+      <Service
+        title="Long-Haul Market Alignment"
+        text="We tailor our logistics to the needs of long-haul markets including the USA, India, China and Europe. This includes balanced daily pacing, photo-friendly scheduling, efficient arrival-day movements and timing suited for long-haul guests."
+        keywords="SEO: USA UK tours, India UK tours, China UK group travel, European inbound tours"
+      />
+
+      {/* CTA */}
+      <section
         style={{
-          display: "grid",
-          gap: "24px",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          marginTop: "60px",
+          padding: "40px",
+          textAlign: "center",
+          background: "#050505",
+          borderRadius: "12px",
         }}
       >
-        {/* SERVICE 1 */}
-        <div style={card}>
-          <h3 style={title}>Fixed-Departure Series Support</h3>
-          <p style={text}>
-            Season-long touring delivery with consistent, repeatable daily
-            execution.
-          </p>
-        </div>
+        <h2 style={{ color: "#d4af37", marginBottom: "10px" }}>
+          Discuss Your Touring Programme
+        </h2>
 
-        {/* SERVICE 2 */}
-        <div style={card}>
-          <h3 style={title}>Multi-Region UK Touring</h3>
-          <p style={text}>
-            Structured touring flows across England, Scotland and Wales with
-            efficient routing.
-          </p>
-        </div>
+        <p style={{ color: "#bbb", marginBottom: "20px" }}>
+          Contact us to discuss your UK & Ireland operational requirements.
+        </p>
 
-        {/* SERVICE 3 */}
-        <div style={card}>
-          <h3 style={title}>UK–Ireland Integrated Itineraries</h3>
-          <p style={text}>
-            Seamless cross-country operations with coordinated timings and
-            single-point operational control.
-          </p>
-        </div>
-
-        {/* SERVICE 4 */}
-        <div style={card}>
-          <h3 style={title}>Large Group Coordination</h3>
-          <p style={text}>
-            Professional handling for high-volume groups, multiple coaches or
-            peak-season programmes.
-          </p>
-        </div>
-
-        {/* SERVICE 5 */}
-        <div style={card}>
-          <h3 style={title}>Long-Haul Market Alignment</h3>
-          <p style={text}>
-            Built to meet the expectations of USA, India, China and Europe
-            markets, matching arrival times, pacing, and touring standards.
-          </p>
-        </div>
-      </div>
+        <a
+          href="/contact"
+          style={{
+            background: "#d4af37",
+            color: "#111",
+            padding: "14px 24px",
+            borderRadius: "8px",
+            fontWeight: 700,
+            textDecoration: "none",
+          }}
+        >
+          Contact Us
+        </a>
+      </section>
     </main>
   );
 }
 
-/* STYLES */
+/* COMPONENT */
 
-const card = {
-  background: "#111",
-  padding: "28px",
-  borderRadius: "14px",
-  border: "1px solid #222",
-};
+function Service({
+  title,
+  text,
+  keywords,
+}: {
+  title: string;
+  text: string;
+  keywords: string;
+}) {
+  return (
+    <div
+      style={{
+        marginBottom: "40px",
+        padding: "24px",
+        background: "#111",
+        borderRadius: "12px",
+        border: "1px solid #222",
+      }}
+    >
+      <h2 style={{ color: "#d4af37", marginBottom: "10px" }}>{title}</h2>
 
-const title = {
-  color: "#d4af37",
-  marginBottom: "10px",
-  fontSize: "18px",
-};
+      <p style={{ color: "#bbb", lineHeight: 1.8 }}>{text}</p>
 
-const text = {
-  color: "#bbb",
-  lineHeight: 1.7,
-};
+      <p
+        style={{
+          marginTop: "10px",
+          fontSize: "13px",
+          color: "#666",
+        }}
+      >
+        {keywords}
+      </p>
+    </div>
+  );
+}
