@@ -63,6 +63,9 @@ export default function RootLayout({
               }}
             >
               <a href="/" style={{ color: "white" }}>Home</a>
+<a href="/about" style={{ color: "white", textDecoration: "none", whiteSpace: "nowrap" }}>
+  About
+</a>
               <a href="/services" style={{ color: "white" }}>Services</a>
               <a href="/how-we-work" style={{ color: "white" }}>How We Work</a>
               <a href="/contact" style={{ color: "white" }}>Contact</a>
