@@ -2,18 +2,18 @@ import React from "react";
 import "./globals.css";
 
 export const metadata = {
-title: "UK Inbound Ground Transport",
-description: "Luxury transport for UK & Ireland tours",
+  title: "UK Inbound Ground Transport",
+  description: "Luxury transport for UK & Ireland tours",
 };
 
 export default function RootLayout({
-children,
+  children,
 }: {
-children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-return (
-<html lang="en">
-<body>{children}</body>
-</html>
-);
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
