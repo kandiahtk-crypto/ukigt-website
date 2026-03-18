@@ -6,21 +6,10 @@ export const metadata = {
     "Reliable UK and Ireland ground-transport solutions for international tour operators and destination management companies.",
 };
 
-const navLink: React.CSSProperties = {
+const link: React.CSSProperties = {
   color: "rgba(255,255,255,0.82)",
   textDecoration: "none",
   fontSize: "14px",
-  whiteSpace: "nowrap",
-};
-
-const contactBtn: React.CSSProperties = {
-  background: "#d4af37",
-  color: "#111",
-  textDecoration: "none",
-  fontSize: "14px",
-  fontWeight: 700,
-  padding: "10px 16px",
-  borderRadius: "999px",
   whiteSpace: "nowrap",
 };
 
@@ -46,9 +35,8 @@ export default function RootLayout({
             left: 0,
             width: "100%",
             zIndex: 1000,
-            background: "rgba(10,10,10,0.88)",
+            background: "rgba(10,10,10,0.85)",
             backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
             borderBottom: "1px solid rgba(255,255,255,0.08)",
           }}
         >
@@ -70,7 +58,7 @@ export default function RootLayout({
                 color: "#d4af37",
                 fontWeight: 700,
                 fontSize: "14px",
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
               }}
@@ -81,37 +69,46 @@ export default function RootLayout({
             <nav
               style={{
                 display: "flex",
-                alignItems: "center",
                 gap: "20px",
+                alignItems: "center",
                 flexWrap: "wrap",
                 justifyContent: "flex-end",
               }}
             >
-              <a href="/" style={navLink}>
+              <a href="/" style={link}>
                 Home
               </a>
-              <a href="/about" style={navLink}>
+              <a href="/about" style={link}>
                 About
               </a>
-              <a href="/services" style={navLink}>
+              <a href="/services" style={link}>
                 Services
               </a>
-              <a href="/programmes" style={navLink}>
+              <a href="/programmes" style={link}>
                 Programmes
               </a>
-              <a href="/how-we-work" style={navLink}>
+              <a href="/how-we-work" style={link}>
                 How We Work
               </a>
-              <a href="/contact" style={contactBtn}>
+              <a
+                href="/contact"
+                style={{
+                  background: "#d4af37",
+                  color: "#111",
+                  padding: "10px 16px",
+                  borderRadius: "999px",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
                 Contact
               </a>
             </nav>
           </div>
         </header>
 
-        <main style={{ paddingTop: "84px", minHeight: "100vh" }}>
-          {children}
-        </main>
+        <main style={{ paddingTop: "84px", minHeight: "100vh" }}>{children}</main>
 
         <footer
           style={{
@@ -132,9 +129,7 @@ export default function RootLayout({
           </p>
 
           <div style={{ marginTop: "20px", color: "#bbb" }}>
-            <p style={{ margin: "4px 0" }}>
-              info@ukinboundgroundtransport.com
-            </p>
+            <p style={{ margin: "4px 0" }}>info@ukinboundgroundtransport.com</p>
             <p style={{ margin: "4px 0" }}>020 8629 2776</p>
             <p style={{ margin: "4px 0" }}>+44 7957 776 778</p>
           </div>
