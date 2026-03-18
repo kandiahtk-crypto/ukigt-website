@@ -29,3 +29,8 @@ textarea,
 button {
   font: inherit;
 }
+
+a[href^="tel"] {
+  color: #bbb;
+  text-decoration: none;
+}
