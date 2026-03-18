@@ -1,5 +1,4 @@
 import "./globals.css";
-import SiteHeader from "./components/SiteHeader";
 
 export const metadata = {
   title: "UK Inbound Ground Transport",
@@ -19,95 +18,112 @@ export default function RootLayout({
           margin: 0,
           background: "#0a0a0a",
           color: "white",
-          fontFamily: "Inter, Arial, sans-serif",
+          fontFamily: "Arial, sans-serif",
         }}
       >
-        <SiteHeader />
-
-        <main style={{ paddingTop: "84px", minHeight: "100vh" }}>
-          {children}
-        </main>
-
-        <footer
+        {/* NAVBAR */}
+        <header
           style={{
-            borderTop: "1px solid #1f1f1f",
-            marginTop: "60px",
-            padding: "48px 24px",
-            background: "#050505",
+            position: "fixed",
+            top: 0,
+            width: "100%",
+            background: "#0a0a0a",
+            borderBottom: "1px solid #222",
+            zIndex: 1000,
           }}
         >
           <div
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "28px",
+              padding: "18px 24px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            <div>
-              <h3
-                style={{
-                  color: "#d4af37",
-                  marginTop: 0,
-                  marginBottom: "12px",
-                  fontSize: "18px",
-                }}
-              >
-                UK Inbound Ground Transport
-              </h3>
+            {/* LOGO */}
+            <a
+              href="/"
+              style={{
+                color: "#d4af37",
+                fontWeight: 700,
+                textDecoration: "none",
+                fontSize: "14px",
+                letterSpacing: "0.05em",
+              }}
+            >
+              UK Inbound Ground Transport
+            </a>
 
-              <p
-                style={{
-                  color: "#aaa",
-                  lineHeight: 1.8,
-                  margin: 0,
-                }}
-              >
-                Supporting international tour operators and destination
-                management companies across the UK and Ireland.
-              </p>
-            </div>
+            {/* MENU */}
+            <nav style={{ display: "flex", gap: "24px" }}>
+              <a href="/" style={link}>Home</a>
+              <a href="/about" style={link}>About</a>
+              <a href="/services" style={link}>Services</a>
+              <a href="/programmes" style={link}>Programmes</a>
+              <a href="/how-we-work" style={link}>How We Work</a>
 
-            <div>
-              <h4
+              <a
+                href="/contact"
                 style={{
-                  color: "#d4af37",
-                  marginTop: 0,
-                  marginBottom: "12px",
-                  fontSize: "15px",
+                  background: "#d4af37",
+                  color: "#111",
+                  padding: "8px 14px",
+                  borderRadius: "6px",
+                  textDecoration: "none",
+                  fontWeight: 600,
                 }}
               >
                 Contact
-              </h4>
+              </a>
+            </nav>
+          </div>
+        </header>
 
-              <p style={{ color: "#bbb", margin: "0 0 8px" }}>
-                info@ukinboundgroundtransport.com
-              </p>
-              <p style={{ color: "#bbb", margin: "0 0 8px" }}>
-                020 8629 2776
-              </p>
-              <p style={{ color: "#bbb", margin: 0 }}>
-                +44 7957 776 778
-              </p>
-            </div>
+        {/* PAGE CONTENT */}
+        <main style={{ paddingTop: "80px", minHeight: "100vh" }}>
+          {children}
+        </main>
+
+        {/* FOOTER */}
+        <footer
+          style={{
+            borderTop: "1px solid #1f1f1f",
+            marginTop: "60px",
+            padding: "40px 20px",
+            textAlign: "center",
+            background: "#050505",
+          }}
+        >
+          <h3 style={{ color: "#d4af37", marginBottom: "10px" }}>
+            UK Inbound Ground Transport
+          </h3>
+
+          <p style={{ color: "#aaa", maxWidth: "500px", margin: "0 auto" }}>
+            Supporting international tour operators and destination management
+            companies across the UK and Ireland.
+          </p>
+
+          <div style={{ marginTop: "20px", color: "#bbb" }}>
+            <p style={{ margin: "4px 0" }}>
+              info@ukinboundgroundtransport.com
+            </p>
+            <p style={{ margin: "4px 0" }}>020 8629 2776</p>
+            <p style={{ margin: "4px 0" }}>+44 7957 776 778</p>
           </div>
 
-          <div
-            style={{
-              maxWidth: "1200px",
-              margin: "28px auto 0",
-              paddingTop: "20px",
-              borderTop: "1px solid #1a1a1a",
-              color: "#666",
-              fontSize: "14px",
-              textAlign: "center",
-            }}
-          >
-            © 2026 UK Inbound Ground Transport. All rights reserved.
-          </div>
+          <p style={{ marginTop: "20px", color: "#666", fontSize: "14px" }}>
+            © 2026 All rights reserved
+          </p>
         </footer>
       </body>
     </html>
   );
 }
+
+const link = {
+  color: "white",
+  textDecoration: "none",
+  fontSize: "14px",
+};
