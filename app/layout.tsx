@@ -1,101 +1,74 @@
-import "./globals.css";
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function HomePage() {
   return (
-    <html lang="en">
-      <body style={{ margin: 0, background: "#0a0a0a", color: "white" }}>
-        
-        {/* NAVBAR */}
-        <header
-          style={{
-            position: "fixed",
-            top: 0,
-            width: "100%",
-            zIndex: 1000,
-            background: "#0a0a0a",
-            borderBottom: "1px solid #1f1f1f",
-          }}
-        >
-          <div
+    <section
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        padding: "60px 24px",
+        backgroundImage:
+          "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.88)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div style={{ maxWidth: "1200px", margin: "0 auto", width: "100%" }}>
+        <div style={{ maxWidth: "760px" }}>
+          <h1
             style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-              padding: "16px 20px",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
+              fontSize: "clamp(42px, 8vw, 72px)",
+              color: "#d4af37",
+              marginBottom: "20px",
+              lineHeight: 1.05,
             }}
           >
-            {/* LOGO */}
+            UK Inbound Ground Transport Specialists
+          </h1>
+
+          <p
+            style={{
+              fontSize: "20px",
+              lineHeight: 1.7,
+              color: "rgba(255,255,255,0.9)",
+              maxWidth: "700px",
+              marginBottom: "30px",
+            }}
+          >
+            We deliver structured, reliable ground transport solutions across
+            the UK and Ireland, supporting international tour operators and
+            destination management companies with seamless touring programmes.
+          </p>
+
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
             <a
-              href="/"
+              href="/contact"
               style={{
-                color: "#d4af37",
+                background: "#d4af37",
+                color: "#111",
+                padding: "14px 22px",
+                borderRadius: "8px",
                 fontWeight: 700,
-                fontSize: "16px",
                 textDecoration: "none",
-                maxWidth: "200px",
-                lineHeight: 1.2,
               }}
             >
-              UK Inbound Ground Transport
+              Speak to Operations
             </a>
 
-            {/* MENU */}
-            <nav
+            <a
+              href="/services"
               style={{
-                display: "flex",
-                gap: "20px",
-                fontSize: "14px",
+                border: "1px solid rgba(255,255,255,0.4)",
+                color: "white",
+                padding: "14px 22px",
+                borderRadius: "8px",
+                textDecoration: "none",
               }}
             >
-              <a href="/" style={{ color: "white", textDecoration: "none" }}>
-                Home
-              </a>
-              <a href="/services" style={{ color: "white", textDecoration: "none" }}>
-                Services
-              </a>
-              <a href="/how-we-work" style={{ color: "white", textDecoration: "none" }}>
-                How We Work
-              </a>
-              <a href="/contact" style={{ color: "white", textDecoration: "none" }}>
-                Contact
-              </a>
-            </nav>
+              View Services
+            </a>
           </div>
-        </header>
-
-        {/* PAGE CONTENT */}
-        <main style={{ paddingTop: "80px" }}>{children}</main>
-
-        {/* FOOTER */}
-        <footer
-          style={{
-            borderTop: "1px solid #1f1f1f",
-            marginTop: "60px",
-            padding: "40px 20px",
-            textAlign: "center",
-          }}
-        >
-          <h3 style={{ color: "#d4af37", marginBottom: "10px" }}>
-            UK Inbound Ground Transport
-          </h3>
-
-          <p style={{ color: "#aaa", maxWidth: "500px", margin: "0 auto" }}>
-            Supporting international tour operators and destination management
-            companies across the UK and Ireland.
-          </p>
-
-          <p style={{ marginTop: "20px", color: "#666", fontSize: "14px" }}>
-            © 2026 All rights reserved
-          </p>
-        </footer>
-
-      </body>
-    </html>
+        </div>
+      </div>
+    </section>
   );
 }
