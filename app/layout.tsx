@@ -1,27 +1,10 @@
 import "./globals.css";
+import SiteHeader from "./components/SiteHeader";
 
 export const metadata = {
   title: "UK Inbound Ground Transport",
   description:
-    "Reliable UK and Ireland ground transport solutions for international tour operators and destination management companies.",
-};
-
-const navLink: React.CSSProperties = {
-  color: "rgba(255,255,255,0.82)",
-  textDecoration: "none",
-  fontSize: "14px",
-  whiteSpace: "nowrap",
-};
-
-const contactBtn: React.CSSProperties = {
-  background: "#d4af37",
-  color: "#111",
-  textDecoration: "none",
-  fontSize: "14px",
-  fontWeight: 700,
-  padding: "10px 16px",
-  borderRadius: "8px",
-  whiteSpace: "nowrap",
+    "Reliable UK and Ireland ground-transport solutions for international tour operators and destination management companies.",
 };
 
 export default function RootLayout({
@@ -36,79 +19,14 @@ export default function RootLayout({
           margin: 0,
           background: "#0a0a0a",
           color: "white",
-          fontFamily: "Arial, sans-serif",
+          fontFamily: "Inter, Arial, sans-serif",
         }}
       >
-        <header
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            zIndex: 1000,
-            background: "rgba(10,10,10,0.92)",
-            backdropFilter: "blur(10px)",
-            borderBottom: "1px solid rgba(255,255,255,0.08)",
-          }}
-        >
-          <div
-            style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-              padding: "16px 24px",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              gap: "24px",
-              flexWrap: "wrap",
-            }}
-          >
-            <a
-              href="/"
-              style={{
-                color: "#d4af37",
-                fontWeight: 700,
-                fontSize: "14px",
-                letterSpacing: "0.04em",
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              UK Inbound Ground Transport
-            </a>
+        <SiteHeader />
 
-            <nav
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "22px",
-                flexWrap: "wrap",
-                justifyContent: "flex-end",
-              }}
-            >
-              <a href="/" style={navLink}>
-                Home
-              </a>
-              <a href="/about" style={navLink}>
-                About
-              </a>
-              <a href="/services" style={navLink}>
-                Services
-              </a>
-              <a href="/programmes" style={navLink}>
-                Programmes
-              </a>
-              <a href="/how-we-work" style={navLink}>
-                How We Work
-              </a>
-              <a href="/contact" style={contactBtn}>
-                Contact
-              </a>
-            </nav>
-          </div>
-        </header>
-
-        <main style={{ paddingTop: "88px", minHeight: "100vh" }}>{children}</main>
+        <main style={{ paddingTop: "84px", minHeight: "100vh" }}>
+          {children}
+        </main>
 
         <footer
           style={{
@@ -149,40 +67,6 @@ export default function RootLayout({
                 Supporting international tour operators and destination
                 management companies across the UK and Ireland.
               </p>
-            </div>
-
-            <div>
-              <h4
-                style={{
-                  color: "#d4af37",
-                  marginTop: 0,
-                  marginBottom: "12px",
-                  fontSize: "15px",
-                }}
-              >
-                Navigation
-              </h4>
-
-              <div style={{ display: "grid", gap: "10px" }}>
-                <a href="/" style={navLink}>
-                  Home
-                </a>
-                <a href="/about" style={navLink}>
-                  About
-                </a>
-                <a href="/services" style={navLink}>
-                  Services
-                </a>
-                <a href="/programmes" style={navLink}>
-                  Programmes
-                </a>
-                <a href="/how-we-work" style={navLink}>
-                  How We Work
-                </a>
-                <a href="/contact" style={navLink}>
-                  Contact
-                </a>
-              </div>
             </div>
 
             <div>
