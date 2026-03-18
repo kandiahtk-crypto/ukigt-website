@@ -1,5 +1,11 @@
 import "./globals.css";
 
+export const metadata = {
+  title: "UK Inbound Ground Transport",
+  description:
+    "Reliable UK and Ireland ground transport solutions for international tour operators and destination management companies.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -15,7 +21,6 @@ export default function RootLayout({
           fontFamily: "Arial, sans-serif",
         }}
       >
-        {/* NAVBAR */}
         <header
           style={{
             position: "fixed",
@@ -37,7 +42,6 @@ export default function RootLayout({
               gap: "20px",
             }}
           >
-            {/* LOGO */}
             <a
               href="/"
               style={{
@@ -47,12 +51,12 @@ export default function RootLayout({
                 textDecoration: "none",
                 maxWidth: "140px",
                 lineHeight: 1.2,
+                flexShrink: 0,
               }}
             >
               UK Inbound Ground Transport
             </a>
 
-            {/* NAV */}
             <nav
               style={{
                 display: "flex",
@@ -60,26 +64,75 @@ export default function RootLayout({
                 fontSize: "13px",
                 flexWrap: "nowrap",
                 overflowX: "auto",
+                WebkitOverflowScrolling: "touch",
               }}
             >
-              <a href="/" style={{ color: "white" }}>Home</a>
-<a href="/about" style={{ color: "white", textDecoration: "none", whiteSpace: "nowrap" }}>
-  About
-</a>
-              <a href="/programmes" style={{ color: "white", textDecoration: "none", whiteSpace: "nowrap" }}>
-  Programmes
-</a>
-              <a href="/services" style={{ color: "white" }}>Services</a>
-              <a href="/how-we-work" style={{ color: "white" }}>How We Work</a>
-              <a href="/contact" style={{ color: "white" }}>Contact</a>
+              <a
+                href="/"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Home
+              </a>
+              <a
+                href="/about"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                About
+              </a>
+              <a
+                href="/programmes"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Programmes
+              </a>
+              <a
+                href="/services"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Services
+              </a>
+              <a
+                href="/how-we-work"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                How We Work
+              </a>
+              <a
+                href="/contact"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Contact
+              </a>
             </nav>
           </div>
         </header>
 
-        {/* PAGE */}
         <main style={{ paddingTop: "80px" }}>{children}</main>
 
-        {/* FOOTER */}
         <footer
           style={{
             borderTop: "1px solid #1f1f1f",
@@ -89,7 +142,7 @@ export default function RootLayout({
             background: "#050505",
           }}
         >
-          <h3 style={{ color: "#d4af37" }}>
+          <h3 style={{ color: "#d4af37", marginBottom: "10px" }}>
             UK Inbound Ground Transport
           </h3>
 
@@ -98,7 +151,13 @@ export default function RootLayout({
             companies across the UK and Ireland.
           </p>
 
-          <p style={{ color: "#666", fontSize: "14px" }}>
+          <p style={{ color: "#bbb", marginTop: "15px" }}>
+            info@ukinboundgroundtransport.com
+          </p>
+
+          <p style={{ color: "#bbb" }}>+44 7957 776 778</p>
+
+          <p style={{ color: "#666", fontSize: "14px", marginTop: "20px" }}>
             © 2026 All rights reserved
           </p>
         </footer>
