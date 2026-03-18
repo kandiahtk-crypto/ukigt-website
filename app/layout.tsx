@@ -15,6 +15,7 @@ export default function RootLayout({
           fontFamily: "Arial, sans-serif",
         }}
       >
+        {/* NAVBAR */}
         <header
           style={{
             position: "fixed",
@@ -32,60 +33,47 @@ export default function RootLayout({
               padding: "16px 20px",
               display: "flex",
               justifyContent: "space-between",
-              alignItems: "flex-start",
+              alignItems: "center",
               gap: "20px",
             }}
           >
+            {/* LOGO */}
             <a
               href="/"
               style={{
                 color: "#d4af37",
                 fontWeight: 700,
-                fontSize: "14px",
+                fontSize: "13px",
                 textDecoration: "none",
-                maxWidth: "160px",
+                maxWidth: "140px",
                 lineHeight: 1.2,
               }}
             >
               UK Inbound Ground Transport
             </a>
 
+            {/* NAV */}
             <nav
               style={{
                 display: "flex",
-                gap: "16px",
+                gap: "14px",
                 fontSize: "13px",
-                flexWrap: "wrap",
-                justifyContent: "flex-end",
+                flexWrap: "nowrap",
+                overflowX: "auto",
               }}
             >
-              <a href="/" style={{ color: "white", textDecoration: "none" }}>
-                Home
-              </a>
-              <a
-                href="/services"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Services
-              </a>
-              <a
-                href="/how-we-work"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                How We Work
-              </a>
-              <a
-                href="/contact"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Contact
-              </a>
+              <a href="/" style={{ color: "white" }}>Home</a>
+              <a href="/services" style={{ color: "white" }}>Services</a>
+              <a href="/how-we-work" style={{ color: "white" }}>How We Work</a>
+              <a href="/contact" style={{ color: "white" }}>Contact</a>
             </nav>
           </div>
         </header>
 
+        {/* PAGE */}
         <main style={{ paddingTop: "80px" }}>{children}</main>
 
+        {/* FOOTER */}
         <footer
           style={{
             borderTop: "1px solid #1f1f1f",
@@ -95,16 +83,16 @@ export default function RootLayout({
             background: "#050505",
           }}
         >
-          <h3 style={{ color: "#d4af37", marginBottom: "10px" }}>
+          <h3 style={{ color: "#d4af37" }}>
             UK Inbound Ground Transport
           </h3>
 
-          <p style={{ color: "#aaa", maxWidth: "520px", margin: "0 auto" }}>
+          <p style={{ color: "#aaa", maxWidth: "500px", margin: "10px auto" }}>
             Supporting international tour operators and destination management
             companies across the UK and Ireland.
           </p>
 
-          <p style={{ marginTop: "20px", color: "#666", fontSize: "14px" }}>
+          <p style={{ color: "#666", fontSize: "14px" }}>
             © 2026 All rights reserved
           </p>
         </footer>
