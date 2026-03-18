@@ -6,8 +6,26 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #0a0a0a;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
 }
