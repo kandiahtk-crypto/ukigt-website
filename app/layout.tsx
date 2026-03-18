@@ -1,11 +1,5 @@
 import "./globals.css";
 
-const linkStyle: React.CSSProperties = {
-  color: "rgba(255,255,255,0.85)",
-  textDecoration: "none",
-  fontSize: "15px",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -22,7 +16,7 @@ export default function RootLayout({
             top: 0,
             width: "100%",
             zIndex: 1000,
-            background: "rgba(10,10,10,0.95)",
+            background: "#0a0a0a",
             borderBottom: "1px solid #1f1f1f",
           }}
         >
@@ -30,61 +24,75 @@ export default function RootLayout({
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "18px 24px",
+              padding: "16px 20px",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
             }}
           >
+            {/* LOGO */}
             <a
               href="/"
               style={{
                 color: "#d4af37",
                 fontWeight: 700,
-                fontSize: "18px",
+                fontSize: "16px",
                 textDecoration: "none",
+                maxWidth: "200px",
+                lineHeight: 1.2,
               }}
             >
               UK Inbound Ground Transport
             </a>
 
-            <nav style={{ display: "flex", gap: "24px" }}>
-              <a href="/" style={linkStyle}>Home</a>
-              <a href="/services" style={linkStyle}>Services</a>
-              <a href="/how-we-work" style={linkStyle}>How We Work</a>
-              <a href="/contact" style={linkStyle}>Contact</a>
+            {/* MENU */}
+            <nav
+              style={{
+                display: "flex",
+                gap: "20px",
+                fontSize: "14px",
+              }}
+            >
+              <a href="/" style={{ color: "white", textDecoration: "none" }}>
+                Home
+              </a>
+              <a href="/services" style={{ color: "white", textDecoration: "none" }}>
+                Services
+              </a>
+              <a href="/how-we-work" style={{ color: "white", textDecoration: "none" }}>
+                How We Work
+              </a>
+              <a href="/contact" style={{ color: "white", textDecoration: "none" }}>
+                Contact
+              </a>
             </nav>
           </div>
         </header>
 
         {/* PAGE CONTENT */}
-        <div style={{ paddingTop: "90px" }}>{children}</div>
+        <main style={{ paddingTop: "80px" }}>{children}</main>
 
         {/* FOOTER */}
         <footer
           style={{
-            marginTop: "80px",
             borderTop: "1px solid #1f1f1f",
-            padding: "50px 24px",
-            background: "#050505",
+            marginTop: "60px",
+            padding: "40px 20px",
+            textAlign: "center",
           }}
         >
-          <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-            
-            <h3 style={{ color: "#d4af37", marginBottom: "10px" }}>
-              UK Inbound Ground Transport
-            </h3>
+          <h3 style={{ color: "#d4af37", marginBottom: "10px" }}>
+            UK Inbound Ground Transport
+          </h3>
 
-            <p style={{ color: "rgba(255,255,255,0.7)", maxWidth: "600px" }}>
-              Supporting international tour operators and destination management
-              companies with reliable UK and Ireland ground transport solutions.
-            </p>
+          <p style={{ color: "#aaa", maxWidth: "500px", margin: "0 auto" }}>
+            Supporting international tour operators and destination management
+            companies across the UK and Ireland.
+          </p>
 
-            <div style={{ marginTop: "20px", color: "rgba(255,255,255,0.5)" }}>
-              © 2026 All rights reserved
-            </div>
-
-          </div>
+          <p style={{ marginTop: "20px", color: "#666", fontSize: "14px" }}>
+            © 2026 All rights reserved
+          </p>
         </footer>
 
       </body>
