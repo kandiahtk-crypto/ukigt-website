@@ -5,7 +5,7 @@ export default function HomePage() {
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
-        padding: "60px 24px",
+        padding: "120px 24px 60px",
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.88)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80')",
         backgroundSize: "cover",
@@ -16,7 +16,7 @@ export default function HomePage() {
         <div style={{ maxWidth: "760px" }}>
           <h1
             style={{
-              fontSize: "clamp(42px, 8vw, 72px)",
+              fontSize: "clamp(36px, 7vw, 64px)",
               color: "#d4af37",
               marginBottom: "20px",
               lineHeight: 1.05,
@@ -31,7 +31,7 @@ export default function HomePage() {
               lineHeight: 1.7,
               color: "rgba(255,255,255,0.9)",
               maxWidth: "700px",
-              marginBottom: "30px",
+              marginBottom: "20px",
             }}
           >
             We deliver structured, reliable ground transport solutions across
