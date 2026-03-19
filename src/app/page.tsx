@@ -27,12 +27,8 @@ export default function HomePage() {
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                /contact
-                  Plan Your Programme
-                </Button>
-                /contact
-                  Speak With Operations
-                </Button>
+                /contactPlan Your Programme</Button>
+                /contactSpeak With Operations</Button>
               </div>
             </Reveal>
 
@@ -62,17 +58,14 @@ export default function HomePage() {
               <p className="text-xs uppercase tracking-[0.28em] text-muted">
                 Who We Are
               </p>
-
               <h2 className="mt-3 text-3xl font-semibold text-ink">
                 Professional. Structured. Reliable.
               </h2>
-
               <p className="mt-5 text-muted leading-relaxed">
                 UK Inbound Ground Transport provides corporate‑grade touring logistics for 
                 international operators. Our operations deliver reliability, consistency and 
                 smooth daily flow across the entire UK & Ireland.
               </p>
-
               <div className="mt-6">
                 /aboutLearn more</Button>
               </div>
@@ -156,7 +149,6 @@ export default function HomePage() {
               <p className="text-lg font-semibold text-ink">
                 Ready to plan your next touring programme?
               </p>
-
               /contactContact us</Button>
             </div>
           </Reveal>
@@ -165,4 +157,3 @@ export default function HomePage() {
     </>
   );
 }
-
