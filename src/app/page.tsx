@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import Button from "@/components/Button";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -22,13 +23,18 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg text-muted leading-relaxed">
-                Professional, structured and dependable touring logistics for international tour operators. 
+                Professional, structured and dependable touring logistics for international tour operators.
                 We deliver high‑quality transport solutions across England, Scotland, Wales and Ireland.
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                /contactPlan Your Programme</Button>
-                /contactSpeak With Operations</Button>
+                /contact
+                  Plan Your Programme
+                </Button>
+
+                /contact
+                  Speak With Operations
+                </Button>
               </div>
             </Reveal>
 
@@ -58,16 +64,21 @@ export default function HomePage() {
               <p className="text-xs uppercase tracking-[0.28em] text-muted">
                 Who We Are
               </p>
+
               <h2 className="mt-3 text-3xl font-semibold text-ink">
                 Professional. Structured. Reliable.
               </h2>
+
               <p className="mt-5 text-muted leading-relaxed">
-                UK Inbound Ground Transport provides corporate‑grade touring logistics for 
-                international operators. Our operations deliver reliability, consistency and 
+                UK Inbound Ground Transport provides corporate‑grade touring logistics for
+                international operators. Our operations deliver reliability, consistency and
                 smooth daily flow across the entire UK & Ireland.
               </p>
+
               <div className="mt-6">
-                /aboutLearn more</Button>
+                /about
+                  Learn More
+                </Button>
               </div>
             </Reveal>
 
@@ -107,7 +118,9 @@ export default function HomePage() {
               </div>
 
               <div className="mt-6">
-                /servicesExplore services</Button>
+                /services
+                  Explore Services
+                </Button>
               </div>
             </Reveal>
           </div>
@@ -143,13 +156,16 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* CONTACT CTA */}
+          {/* CTA */}
           <Reveal className="mt-14">
             <div className="rounded-2xl border border-black/10 bg-white p-8 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <p className="text-lg font-semibold text-ink">
                 Ready to plan your next touring programme?
               </p>
-              /contactContact us</Button>
+
+              /contact
+                Contact Us
+              </Button>
             </div>
           </Reveal>
         </Container>
