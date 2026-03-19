@@ -18,7 +18,6 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -33,13 +32,17 @@ export default function Navbar() {
     >
       <Container>
         <div className="flex h-16 items-center justify-between">
-          /
+          <Link href="/" className="font-semibold text-steel">
             UK Inbound Ground Transport
           </Link>
 
           <nav className="hidden md:flex items-center gap-7 text-sm text-muted">
-            {nav.map(n => (
-              {n.href}
+            {nav.map((n) => (
+              <Link
+                key={n.href}
+                href={n.href}
+                className="transition hover:text-steel"
+              >
                 {n.label}
               </Link>
             ))}
@@ -47,7 +50,7 @@ export default function Navbar() {
 
           <button
             className="md:hidden rounded-lg border border-black/10 px-3 py-2 text-sm"
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen((prev) => !prev)}
           >
             Menu
           </button>
@@ -56,8 +59,11 @@ export default function Navbar() {
         {open && (
           <div className="md:hidden pb-4">
             <div className="grid gap-2 rounded-xl bg-cloud p-3">
-              {nav.map(n => (
-                {n.href} => setOpen(false)}
+              {nav.map((n) => (
+                <Link
+                  key={n.href}
+                  href={n.href}
+                  onClick={() => setOpen(false)}
                   className="rounded-lg px-3 py-2 text-sm text-steel hover:bg-white"
                 >
                   {n.label}
