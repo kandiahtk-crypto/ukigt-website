@@ -33,12 +33,8 @@ export default function ContactPage() {
               </p>
 
               <div className="mt-6 flex gap-3">
-                {`mailto:${email}`}
-                  Email Us
-                </Button>
-                {`tel:${phone2}`}
-                  Call Us
-                </Button>
+                {`mailto:${email}`}Email Us</Button>
+                {`tel:${phone2}`}Call Us</Button>
               </div>
             </div>
           </Reveal>
@@ -50,27 +46,27 @@ export default function ContactPage() {
 
               <div className="mt-4 grid gap-4">
                 <input
-                  name="name"
+                  name="Name"
                   type="text"
                   placeholder="Name"
                   required
                   className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm"
                 />
                 <input
-                  name="company"
+                  name="Company"
                   type="text"
                   placeholder="Company"
                   className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm"
                 />
                 <input
-                  name="email"
+                  name="Email"
                   type="email"
                   placeholder="Email"
                   required
                   className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm"
                 />
                 <textarea
-                  name="message"
+                  name="Message"
                   placeholder="Programme details (dates, group size, routing)"
                   required
                   className="min-h-[120px] w-full rounded-xl border border-black/10 px-4 py-3 text-sm"
@@ -87,4 +83,3 @@ export default function ContactPage() {
     </section>
   );
 }
-
